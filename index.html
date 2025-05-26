@@ -90,7 +90,15 @@
       padding: 2rem;
       border-radius: 16px;
       box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
+
+    /* Bubble effect when in view */
+    .in-view {
+      transform: scale(1.02);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
     h2 {
       border-left: 4px solid #2563eb;
       padding-left: 1rem;
@@ -306,6 +314,26 @@
   <footer>
     <p>&copy; 2025 Neyyala Harshavardhan. All rights reserved.</p>
   </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        } else {
+          entry.target.classList.remove("in-view");
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 
 </body>
 </html>
