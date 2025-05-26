@@ -11,97 +11,41 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f9fafb;
+      background: #f3f4f6;
       color: #111827;
     }
+
     header {
-      background: #1f2937;
+      background: #111827;
       color: #fff;
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem;
       text-align: center;
     }
     nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       margin-top: 1rem;
     }
     nav a {
       color: #fff;
-      margin: 0 1rem;
+      margin: 0.5rem 1rem;
       text-decoration: none;
       font-weight: 600;
     }
     nav a:hover {
       text-decoration: underline;
     }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    h2 {
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 0.5rem;
-      color: #1f2937;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      padding: 0.5rem 0;
-    }
-    .project, .internship {
-      margin-bottom: 1.5rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background: #1f2937;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .contact p i {
-      margin-right: 0.5rem;
-      color: #374151;
-    }
-    #about {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    #about img {
-      max-width: 200px;
-      border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      object-fit: cover;
-      height: 200px;
-      width: 200px;
-      flex-shrink: 0;
-    }
-    #about div {
-      flex: 1;
-      min-width: 280px;
-    }
-    /* New Hero Section */
+
     .hero {
       min-height: 100vh;
-      background: #111827;
+      background: linear-gradient(to right, #1f2937, #111827);
       color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 2rem;
+      padding: 4rem 2rem;
       text-align: center;
     }
     .hero h1 {
@@ -116,7 +60,7 @@
     }
     .hero a {
       display: inline-block;
-      margin: 0 0.5rem;
+      margin: 0.5rem;
       padding: 0.75rem 1.5rem;
       border-radius: 0.5rem;
       font-weight: 600;
@@ -139,39 +83,91 @@
       color: black;
     }
 
-    @media (max-width: 640px) {
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      nav a {
-        margin: 0.5rem;
-      }
-      #about {
-        flex-direction: column;
-        text-align: center;
-      }
-      #about div {
-        min-width: auto;
-      }
-      #about img {
-        margin-bottom: 1rem;
-        height: 150px;
-        width: 150px;
-      }
+    section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      border-left: 4px solid #2563eb;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    .project, .internship {
+      margin-bottom: 2rem;
+    }
+
+    .contact p i {
+      margin-right: 0.5rem;
+      color: #374151;
+    }
+
+    #about {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    #about img {
+      max-width: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      height: 200px;
+      width: 200px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    #about div {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #111827;
+      color: #fff;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+
+    a {
+      color: #2563eb;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
       .hero h1 {
         font-size: 2.25rem;
       }
       .hero p {
         font-size: 1rem;
       }
+      #about {
+        flex-direction: column;
+        text-align: center;
+      }
+      #about img {
+        height: 150px;
+        width: 150px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
   <section class="hero">
     <h1>Harshavardhan Neyyala</h1>
     <p>Aspiring AI & Machine Learning Engineer</p>
@@ -260,17 +256,12 @@
     <h2>Certifications</h2>
     <ul>
       <li><a href="certificates/AWS Certified Cloud Practitioner.pdf" target="_blank">AWS Certified Cloud Practitioner</a></li>
-       <li><a href="certificates/Python_Essentials_Certificate.pdf" target="_blank">Programming Essentials in Python</a></li>
+      <li><a href="certificates/Python_Essentials_Certificate.pdf" target="_blank">Programming Essentials in Python</a></li>
       <li><a href="certificates/C_Essentials_Certificate.pdf" target="_blank">Programming Essentials in C</a></li>
-       <li><a href="certificates/Frontend_Developer_Certificate.pdf" target="_blank">Frontend Developer Internship – UniStack</a></li>
+      <li><a href="certificates/Frontend_Developer_Certificate.pdf" target="_blank">Frontend Developer Internship – UniStack</a></li>
       <li><a href="certificates/Neyyala_Harshavardhan_AI_Certificate.pdf" target="_blank">Artificial Intelligence – SkillDzire</a></li>
       <li><a href="certificates/Neyyala_Harshavardhan_certificateml.pdf" target="_blank">Machine Learning – SkillDzire</a></li>
-      <li>
-  <a href="certificates/Aap_Badho_Desh_Certificate.pdf" target="_blank">
-    Aap Badho Desh Ko Badhao – Lead India Foundation
-  </a>
-</li>
-
+      <li><a href="certificates/Aap_Badho_Desh_Certificate.pdf" target="_blank">Aap Badho Desh Ko Badhao – Lead India Foundation</a></li>
     </ul>
   </section>
 
@@ -303,26 +294,18 @@
     </ul>
   </section>
 
- <section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>Feel free to reach out for collaborations, internships, or just to connect!</p>
-  <p><i class="fas fa-envelope"></i> 
-    <a href="mailto:harsha7125hg@gmail.com">harsha7125hg@gmail.com</a>
-  </p>
-  <p><i class="fas fa-phone"></i> 
-    <a href="tel:+916300841590">+91 6300841590</a>
-  </p>
-  <p><i class="fab fa-linkedin"></i> 
-    <a href="https://linkedin.com/in/harsha-neyyala-2ba970229" target="_blank">linkedin.com/in/harsha-neyyala</a>
-  </p>
-  <p><i class="fab fa-github"></i> 
-    <a href="https://github.com/Harsha147" target="_blank">github.com/Harsha147</a>
-  </p>
-</section>
-
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out for collaborations, internships, or just to connect!</p>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:harsha7125hg@gmail.com">harsha7125hg@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i> <a href="tel:+916300841590">+91 6300841590</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/harsha-neyyala-2ba970229" target="_blank">linkedin.com/in/harsha-neyyala</a></p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/Harsha147" target="_blank">github.com/Harsha147</a></p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Neyyala Harshavardhan. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
