@@ -92,6 +92,53 @@
       flex: 1;
       min-width: 280px;
     }
+    /* New Hero Section */
+    .hero {
+      min-height: 100vh;
+      background: #111827;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: #d1d5db;
+      margin-bottom: 2rem;
+    }
+    .hero a {
+      display: inline-block;
+      margin: 0 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    .hero a.primary {
+      background: #2563eb;
+      color: white;
+    }
+    .hero a.primary:hover {
+      background: #1d4ed8;
+    }
+    .hero a.secondary {
+      border: 2px solid white;
+      color: white;
+    }
+    .hero a.secondary:hover {
+      background: white;
+      color: black;
+    }
+
     @media (max-width: 640px) {
       nav {
         display: flex;
@@ -113,10 +160,27 @@
         height: 150px;
         width: 150px;
       }
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Harshavardhan Neyyala</h1>
+    <p>Aspiring AI & Machine Learning Engineer</p>
+    <div>
+      <a href="#projects" class="primary">View Projects</a>
+      <a href="resume.pdf" target="_blank" class="secondary">Download Resume</a>
+    </div>
+  </section>
+
   <header>
     <h1>Neyyala Harshavardhan</h1>
     <p>Aspiring AI & ML Developer | Python | Web Development | AWS Cloud practitioner</p>
