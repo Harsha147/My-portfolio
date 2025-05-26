@@ -53,24 +53,11 @@
       font-weight: 800;
       margin-bottom: 1rem;
     }
-    .typing {
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 3px solid;
-      width: fit-content;
-      animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+    .hero p {
       font-size: 1.25rem;
       color: #d1d5db;
       margin-bottom: 2rem;
     }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-
     .hero a {
       display: inline-block;
       margin: 0.5rem;
@@ -165,7 +152,7 @@
       .hero h1 {
         font-size: 2.25rem;
       }
-      .typing {
+      .hero p {
         font-size: 1rem;
       }
       #about {
@@ -183,7 +170,7 @@
 
   <section class="hero">
     <h1>Harshavardhan Neyyala</h1>
-    <p class="typing">Aspiring AI & ML Developer | Python | Web Development | AWS Cloud</p>
+    <p>Aspiring AI & Machine Learning Engineer</p>
     <div>
       <a href="#projects" class="primary">View Projects</a>
       <a href="Neyyalaresume.pdf" target="_blank" class="secondary">Download Resume</a>
@@ -207,77 +194,103 @@
   </header>
 
   <section id="about">
-    <img src="profile.jpg" alt="Profile Picture">
+    <img src="images/harsha.jpg" alt="Harshavardhan Neyyala Photo" />
     <div>
       <h2>About Me</h2>
-      <p>I am Harshavardhan Neyyala, a final year engineering student passionate about AI/ML, cloud computing, and full-stack development. I love building impactful solutions with Python and AWS tools, and I’m always exploring new tech.</p>
+      <p><strong>Career Objective:</strong> Passionate AI & ML enthusiast with hands-on experience in developing predictive models and full stack web applications. Seeking opportunities to apply my skills to real-world problems and contribute to innovative projects in AI and software development.</p>
+      <p>B.Tech in Computer Science & Engineering majoring in AI & ML from Aditya College of Engineering and Technology. Experienced in AI, Machine Learning, and Full Stack Development through internships and personal projects.</p>
+      <p>Interned as a <strong>Frontend Developer</strong> at UniStack, and in <strong>AI & ML</strong> roles at SkillDzire.</p>
+      <p>Certified in <strong>AWS Cloud Practitioner</strong>, <strong>Python</strong>, and <strong>C Programming</strong>.</p>
     </div>
   </section>
 
   <section id="education">
     <h2>Education</h2>
     <ul>
-      <li>B.Tech in Computer Science - XYZ Engineering College - 2021–2025 (Expected)</li>
-      <li>Intermediate - Narayana Junior College - 2019–2021</li>
-      <li>SSC - Sri Chaitanya Techno School - 2019</li>
+      <li><strong>B.Tech in CSE (AI & ML)</strong>, Aditya College of Engineering and Technology (2021–2025)</li>
+      <li><strong>Intermediate</strong>, Sri Vasavi Junior College (2019–2021)</li>
+      <li><strong>SSC</strong>, Narayana E.M School (2019)</li>
     </ul>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
-      <h3>AI Chatbot using Python</h3>
-      <p>Developed a rule-based chatbot using Python and NLTK to simulate customer support interactions.</p>
-    </div>
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>Designed and deployed a personal portfolio using HTML, CSS, and JavaScript hosted on GitHub Pages.</p>
+      <h3>Suicidal Content Detection System</h3>
+      <p><strong>Challenge:</strong> Detect and flag suicidal posts on social media platforms to assist in timely intervention.</p>
+      <p><strong>Approach:</strong> Developed a hybrid machine learning model combining NLP techniques and sentiment analysis using SVM, Random Forest, and ANN.</p>
+      <p><strong>Impact:</strong> Achieved over 85% accuracy in detecting harmful content, providing a potential tool for mental health support teams.</p>
+      <p><strong>Tech Stack:</strong> Python, Flask, PyTorch, Scikit-learn, HTML, CSS</p>
     </div>
   </section>
 
   <section id="internships">
     <h2>Internships</h2>
     <div class="internship">
-      <h3>Intern - AWS Cloud Virtual Internship</h3>
-      <p>Learned AWS core services, EC2, S3, Lambda, and deployed cloud-based projects.</p>
+      <h3>Frontend Developer – UniStack / Hydro Tribe</h3>
+      <ul>
+        <li>Developed responsive and user-friendly UI using HTML, CSS, and JavaScript.</li>
+        <li>Optimized page load speed, improving user experience by 20%.</li>
+        <li><a href="certificates/Frontend_Developer_Certificate.pdf" target="_blank">View Certificate</a></li>
+      </ul>
+    </div>
+    <div class="internship">
+      <h3>Artificial Intelligence Intern – SkillDzire</h3>
+      <ul>
+        <li>Applied AI algorithms to real-world datasets, improving classification accuracy on benchmark tests.</li>
+        <li>Collaborated with data scientists to fine-tune models for better performance.</li>
+        <li><a href="certificates/Neyyala_Harshavardhan_AI_Certificate.pdf" target="_blank">View Certificate</a></li>
+      </ul>
+    </div>
+    <div class="internship">
+      <h3>Machine Learning Intern – SkillDzire</h3>
+      <ul>
+        <li>Built scalable ML pipelines and predictive models for business use cases.</li>
+        <li>Reduced prediction errors by 15% through feature engineering and hyperparameter tuning.</li>
+        <li><a href="certificates/Neyyala_Harshavardhan_certificateml.pdf" target="_blank">View Certificate</a></li>
+      </ul>
     </div>
   </section>
 
   <section id="certifications">
     <h2>Certifications</h2>
     <ul>
-      <li>AWS Academy Cloud Foundations</li>
-      <li>Google Data Analytics Certification</li>
-      <li>Python for Everybody - University of Michigan (Coursera)</li>
-      <li>Introduction to Machine Learning - NPTEL</li>
+      <li><a href="certificates/AWS Certified Cloud Practitioner.pdf" target="_blank">AWS Certified Cloud Practitioner</a></li>
+      <li><a href="certificates/Python_Essentials_Certificate.pdf" target="_blank">Programming Essentials in Python</a></li>
+      <li><a href="certificates/C_Essentials_Certificate.pdf" target="_blank">Programming Essentials in C</a></li>
+      <li><a href="certificates/Frontend_Developer_Certificate.pdf" target="_blank">Frontend Developer Internship – UniStack</a></li>
+      <li><a href="certificates/Neyyala_Harshavardhan_AI_Certificate.pdf" target="_blank">Artificial Intelligence – SkillDzire</a></li>
+      <li><a href="certificates/Neyyala_Harshavardhan_certificateml.pdf" target="_blank">Machine Learning – SkillDzire</a></li>
+      <li><a href="certificates/Aap_Badho_Desh_Certificate.pdf" target="_blank">Aap Badho Desh Ko Badhao – Lead India Foundation</a></li>
     </ul>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
+    <h2>Technical Skills</h2>
     <ul>
-      <li>Programming Languages: Python, Java, C</li>
-      <li>Cloud: AWS (EC2, S3, Lambda)</li>
-      <li>Web: HTML, CSS, JavaScript</li>
-      <li>DevOps: GitHub, Linux, CI/CD basics</li>
+      <li><strong>Languages:</strong> Python (Advanced), C (Intermediate), Java (Intermediate), C++ (Basic)</li>
+      <li><strong>Frameworks & Libraries:</strong> Flask, PyTorch, Scikit-learn</li>
+      <li><strong>Tools:</strong> VS Code, Jupyter Notebook, Git, Docker</li>
     </ul>
   </section>
 
   <section id="learning">
-    <h2>Currently Learning</h2>
+    <h2>Learning & Growth</h2>
     <ul>
-      <li>Machine Learning Algorithms</li>
-      <li>Advanced AWS Services</li>
-      <li>React.js Frontend Framework</li>
+      <li>Participated in AI & ML workshops conducted by SkillDzire.</li>
+      <li>Attended webinars on cloud computing and deployment strategies.</li>
+      <li>Completed online courses on Coursera and Udemy.</li>
+      <li>Active member of college coding and AI clubs, regularly contributing to hackathons.</li>
     </ul>
   </section>
 
   <section id="hobbies">
     <h2>Hobbies</h2>
     <ul>
-      <li>Blogging and technical writing</li>
-      <li>Playing Chess and Cricket</li>
-      <li>Learning new programming languages</li>
+      <li>Reading Story Books – Enhances creativity and empathy.</li>
+      <li>Watching Movies – Improves cultural awareness and storytelling appreciation.</li>
+      <li>Listening to Music – Helps relax and maintain focus.</li>
+      <li>Playing Cricket and Chess – Develops strategic thinking and teamwork skills.</li>
     </ul>
   </section>
 
@@ -288,33 +301,11 @@
     <p><i class="fas fa-phone"></i> <a href="tel:+916300841590">+91 6300841590</a></p>
     <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/harsha-neyyala-2ba970229" target="_blank">linkedin.com/in/harsha-neyyala</a></p>
     <p><i class="fab fa-github"></i> <a href="https://github.com/Harsha147" target="_blank">github.com/Harsha147</a></p>
-    <form action="mailto:harsha7125hg@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
   </section>
 
   <footer>
     <p>&copy; 2025 Neyyala Harshavardhan. All rights reserved.</p>
   </footer>
-
-  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="position: fixed; bottom: 30px; right: 30px; padding: 10px; border-radius: 50%; background: #2563eb; color: white; border: none;">↑</button>
-
-  <script>
-    // Theme persistence
-    function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-    }
-
-    window.onload = function () {
-      if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-      }
-    }
-  </script>
 
 </body>
 </html>
