@@ -2,163 +2,189 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harshavardhan's Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: #f9fafb;
       color: #111827;
-      transition: background 0.3s, color 0.3s;
     }
-
-    .dark {
-      background: #111827;
-      color: #f9fafb;
-    }
-
     header {
       background: #1f2937;
-      color: white;
-      padding: 1rem;
+      color: #fff;
+      padding: 2rem 1rem;
       text-align: center;
     }
-
-    .header-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .hamburger {
-      display: none;
-      background: none;
-      font-size: 1.5rem;
-      border: none;
-      color: white;
-    }
-
     nav {
       margin-top: 1rem;
     }
-
     nav a {
-      margin: 0 0.5rem;
-      color: white;
+      color: #fff;
+      margin: 0 1rem;
       text-decoration: none;
       font-weight: 600;
     }
-
-    nav.show {
-      display: block;
+    nav a:hover {
+      text-decoration: underline;
     }
-
-    .hero {
-      min-height: 80vh;
-      background: #111827;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-    }
-
-    .hero a {
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 0.5rem;
-      font-weight: bold;
-      display: inline-block;
-    }
-
-    .primary {
-      background: #2563eb;
-      color: white;
-    }
-
-    .secondary {
-      border: 2px solid white;
-      color: white;
-    }
-
     section {
       max-width: 900px;
       margin: 2rem auto;
-      background: white;
+      background: #fff;
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-
-    .dark section {
-      background: #1f2937;
-    }
-
     h2 {
       border-bottom: 2px solid #e5e7eb;
       padding-bottom: 0.5rem;
+      color: #1f2937;
     }
-
-    img {
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      padding: 0.5rem 0;
+    }
+    .project, .internship {
+      margin-bottom: 1.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #1f2937;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .contact p i {
+      margin-right: 0.5rem;
+      color: #374151;
+    }
+    #about {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    #about img {
       max-width: 200px;
       border-radius: 50%;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      object-fit: cover;
+      height: 200px;
+      width: 200px;
+      flex-shrink: 0;
     }
-
-    .contact i {
-      margin-right: 0.5rem;
+    #about div {
+      flex: 1;
+      min-width: 280px;
     }
-
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: transparent;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
+    /* New Hero Section */
+    .hero {
+      min-height: 100vh;
+      background: #111827;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: #d1d5db;
+      margin-bottom: 2rem;
+    }
+    .hero a {
+      display: inline-block;
+      margin: 0 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    .hero a.primary {
+      background: #2563eb;
+      color: white;
+    }
+    .hero a.primary:hover {
+      background: #1d4ed8;
+    }
+    .hero a.secondary {
+      border: 2px solid white;
+      color: white;
+    }
+    .hero a.secondary:hover {
+      background: white;
+      color: black;
     }
 
     @media (max-width: 640px) {
-      .hamburger {
-        display: inline;
-      }
       nav {
-        display: none;
-        flex-direction: column;
-      }
-      nav.show {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      nav a {
+        margin: 0.5rem;
+      }
+      #about {
+        flex-direction: column;
+        text-align: center;
+      }
+      #about div {
+        min-width: auto;
+      }
+      #about img {
+        margin-bottom: 1rem;
+        height: 150px;
+        width: 150px;
       }
       .hero h1 {
-        font-size: 2rem;
+        font-size: 2.25rem;
+      }
+      .hero p {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Dark Mode Toggle -->
-  <button class="theme-toggle" aria-label="Toggle Dark Mode" onclick="toggleTheme()">🌙</button>
-
-  <!-- Mobile Navbar -->
-  <header>
-    <div class="header-top">
-      <h1>Neyyala Harshavardhan</h1>
-      <button class="hamburger" onclick="toggleNav()">☰</button>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Harshavardhan Neyyala</h1>
+    <p>Aspiring AI & Machine Learning Engineer</p>
+    <div>
+      <a href="#projects" class="primary">View Projects</a>
+      <a href="Neyyalaresume.pdf" target="_blank" class="secondary">Download Resume</a>
     </div>
-    <p>Aspiring AI & ML Developer | Python | Web Development | AWS Cloud Practitioner</p>
-    <nav id="navbar" aria-label="Primary navigation">
+  </section>
+
+  <header>
+    <h1>Neyyala Harshavardhan</h1>
+    <p>Aspiring AI & ML Developer | Python | Web Development | AWS Cloud practitioner</p>
+    <nav aria-label="Primary navigation">
       <a href="#about">About</a>
       <a href="#education">Education</a>
       <a href="#projects">Projects</a>
@@ -171,29 +197,21 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Harshavardhan Neyyala</h1>
-    <p>Aspiring AI & Machine Learning Engineer</p>
-    <div>
-      <a href="#projects" class="primary">View Projects</a>
-      <a href="Neyyalaresume.pdf" target="_blank" class="secondary">Download Resume</a>
-    </div>
-  </section>
-
   <section id="about">
-    <img src="harsha.jpg" alt="Harshavardhan Neyyala" loading="lazy" />
+    <img src="images/harsha.jpg" alt="Harshavardhan Neyyala Photo" />
     <div>
       <h2>About Me</h2>
-      <p><strong>Career Objective:</strong> Passionate AI & ML enthusiast with hands-on experience in predictive models and full stack web apps. Seeking to contribute to impactful software projects.</p>
-      <p>Pursuing B.Tech in CSE (AI & ML) from Aditya College of Engineering and Technology. Interned in both AI and frontend domains with practical project experience.</p>
+      <p><strong>Career Objective:</strong> Passionate AI & ML enthusiast with hands-on experience in developing predictive models and full stack web applications. Seeking opportunities to apply my skills to real-world problems and contribute to innovative projects in AI and software development.</p>
+      <p>B.Tech in Computer Science & Engineering majoring in AI & ML from Aditya College of Engineering and Technology. Experienced in AI, Machine Learning, and Full Stack Development through internships and personal projects.</p>
+      <p>Interned as a <strong>Frontend Developer</strong> at UniStack, and in <strong>AI & ML</strong> roles at SkillDzire.</p>
+      <p>Certified in <strong>AWS Cloud Practitioner</strong>, <strong>Python</strong>, and <strong>C Programming</strong>.</p>
     </div>
   </section>
 
   <section id="education">
     <h2>Education</h2>
     <ul>
-      <li><strong>B.Tech CSE (AI & ML)</strong>, Aditya College of Engineering and Technology (2021–2025)</li>
+      <li><strong>B.Tech in CSE (AI & ML)</strong>, Aditya College of Engineering and Technology (2021–2025)</li>
       <li><strong>Intermediate</strong>, Sri Vasavi Junior College (2019–2021)</li>
       <li><strong>SSC</strong>, Narayana E.M School (2019)</li>
     </ul>
@@ -203,16 +221,10 @@
     <h2>Projects</h2>
     <div class="project">
       <h3>Suicidal Content Detection System</h3>
-      <p><strong>Challenge:</strong> Detect and flag suicidal posts on social platforms.</p>
-      <p><strong>Approach:</strong> Hybrid ML model using NLP, SVM, Random Forest, ANN.</p>
-      <p><strong>Impact:</strong> Achieved 85%+ accuracy, aiding mental health support teams.</p>
+      <p><strong>Challenge:</strong> Detect and flag suicidal posts on social media platforms to assist in timely intervention.</p>
+      <p><strong>Approach:</strong> Developed a hybrid machine learning model combining NLP techniques and sentiment analysis using SVM, Random Forest, and ANN.</p>
+      <p><strong>Impact:</strong> Achieved over 85% accuracy in detecting harmful content, providing a potential tool for mental health support teams.</p>
       <p><strong>Tech Stack:</strong> Python, Flask, PyTorch, Scikit-learn, HTML, CSS</p>
-    </div>
-    <div class="project">
-      <h3>Weather Forecast Web App</h3>
-      <p><strong>Description:</strong> Displays real-time weather using OpenWeather API.</p>
-      <p><strong>Features:</strong> Responsive UI, city search, temperature & humidity display.</p>
-      <p><strong>Tech Stack:</strong> HTML, CSS, JS, API</p>
     </div>
   </section>
 
@@ -221,9 +233,25 @@
     <div class="internship">
       <h3>Frontend Developer – UniStack / Hydro Tribe</h3>
       <ul>
-        <li>Built responsive UI using HTML/CSS/JS.</li>
-        <li>Improved page speed by 20%.</li>
+        <li>Developed responsive and user-friendly UI using HTML, CSS, and JavaScript.</li>
+        <li>Optimized page load speed, improving user experience by 20%.</li>
         <li><a href="certificates/Frontend_Developer_Certificate.pdf" target="_blank">View Certificate</a></li>
+      </ul>
+    </div>
+    <div class="internship">
+      <h3>Artificial Intelligence Intern – SkillDzire</h3>
+      <ul>
+        <li>Applied AI algorithms to real-world datasets, improving classification accuracy on benchmark tests.</li>
+        <li>Collaborated with data scientists to fine-tune models for better performance.</li>
+        <li><a href="certificates/Neyyala_Harshavardhan_AI_Certificate.pdf" target="_blank">View Certificate</a></li>
+      </ul>
+    </div>
+    <div class="internship">
+      <h3>Machine Learning Intern – SkillDzire</h3>
+      <ul>
+        <li>Built scalable ML pipelines and predictive models for business use cases.</li>
+        <li>Reduced prediction errors by 15% through feature engineering and hyperparameter tuning.</li>
+        <li><a href="certificates/Neyyala_Harshavardhan_certificateml.pdf" target="_blank">View Certificate</a></li>
       </ul>
     </div>
   </section>
@@ -232,54 +260,55 @@
     <h2>Certifications</h2>
     <ul>
       <li><a href="certificates/AWS Certified Cloud Practitioner.pdf" target="_blank">AWS Certified Cloud Practitioner</a></li>
-      <li><a href="certificates/Python_Essentials_Certificate.pdf" target="_blank">Python Essentials</a></li>
+      <li><a href="certificates/Frontend_Developer_Certificate.pdf" target="_blank">Frontend Developer Internship – UniStack</a></li>
+      <li><a href="certificates/Neyyala_Harshavardhan_AI_Certificate.pdf" target="_blank">Artificial Intelligence – SkillDzire</a></li>
+      <li><a href="certificates/Neyyala_Harshavardhan_certificateml.pdf" target="_blank">Machine Learning – SkillDzire</a></li>
+      <li><a href="certificates/Python_Essentials_Certificate.pdf" target="_blank">Programming Essentials in Python</a></li>
+      <li><a href="certificates/C_Essentials_Certificate.pdf" target="_blank">Programming Essentials in C</a></li>
+      <li>Aap Badho Desh Ko Badhao – Lead India Foundation</li>
     </ul>
   </section>
 
   <section id="skills">
     <h2>Technical Skills</h2>
     <ul>
-      <li><strong>Languages:</strong> Python, C, Java</li>
-      <li><strong>Libraries:</strong> Flask, PyTorch, Scikit-learn</li>
-      <li><strong>Tools:</strong> Git, Docker, VS Code</li>
+      <li><strong>Languages:</strong> Python (Advanced), C (Intermediate), Java (Intermediate), C++ (Basic)</li>
+      <li><strong>Frameworks & Libraries:</strong> Flask, PyTorch, Scikit-learn</li>
+      <li><strong>Tools:</strong> VS Code, Jupyter Notebook, Git, Docker</li>
     </ul>
   </section>
 
   <section id="learning">
     <h2>Learning & Growth</h2>
     <ul>
-      <li>AI workshops at SkillDzire.</li>
-      <li>Webinars on cloud and deployment.</li>
+      <li>Participated in AI & ML workshops conducted by SkillDzire.</li>
+      <li>Attended webinars on cloud computing and deployment strategies.</li>
+      <li>Completed online courses on Coursera and Udemy.</li>
+      <li>Active member of college coding and AI clubs, regularly contributing to hackathons.</li>
     </ul>
   </section>
 
   <section id="hobbies">
     <h2>Hobbies</h2>
     <ul>
-      <li>Reading books, playing cricket & chess.</li>
+      <li>Reading Story Books – Enhances creativity and empathy.</li>
+      <li>Watching Movies – Improves cultural awareness and storytelling appreciation.</li>
+      <li>Listening to Music – Helps relax and maintain focus.</li>
+      <li>Playing Cricket and Chess – Develops strategic thinking and teamwork skills.</li>
     </ul>
   </section>
 
   <section id="contact" class="contact">
     <h2>Contact</h2>
+    <p>Feel free to reach out for collaborations, internships, or just to connect!</p>
     <p><i class="fas fa-envelope"></i> harsha7125hg@gmail.com</p>
     <p><i class="fas fa-phone"></i> +91 6300841590</p>
-    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/harsha-neyyala-2ba970229" target="_blank">LinkedIn</a></p>
-    <p><i class="fab fa-github"></i> <a href="https://github.com/Harsha147" target="_blank">GitHub</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/harsha-neyyala-2ba970229" target="_blank">linkedin.com/in/harsha-neyyala</a></p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/Harsha147" target="_blank">github.com/Harsha147</a></p>
   </section>
 
   <footer>
     <p>&copy; 2025 Neyyala Harshavardhan. All rights reserved.</p>
   </footer>
-
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle("dark");
-    }
-
-    function toggleNav() {
-      document.getElementById("navbar").classList.toggle("show");
-    }
-  </script>
 </body>
 </html>
