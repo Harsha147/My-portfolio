@@ -155,6 +155,34 @@
       #about { flex-direction: column; text-align: center; }
       #about img { height: 150px; width: 150px; }
     }
+
+    table.education-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid #ccc;
+      font-family: 'Inter', sans-serif;
+      margin-top: 1em;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    table.education-table th,
+    table.education-table td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid #eee;
+    }
+
+    table.education-table thead {
+      background-color: #f3f4f6;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    table.education-table tbody tr:hover {
+      background-color: #f9fafb;
+    }
   </style>
 </head>
 <body>
@@ -197,39 +225,37 @@
 
   <section id="education">
     <h2>Education</h2>
- <table border="1" cellspacing="0" cellpadding="8">
-  <thead>
-    <tr>
-      <th>Qualification</th>
-      <th>Institution</th>
-      <th>Year</th>
-      <th>Score</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>B.Tech in CSE (AI & ML)</strong></td>
-      <td>Aditya College of Engineering and Technology</td>
-      <td>2021 – 2025</td>
-      <td>7.35 CGPA</td>
-    </tr>
-    <tr>
-      <td><strong>Intermediate</strong></td>
-      <td>Sri Vasavi Junior College</td>
-      <td>2019 – 2021</td>
-      <td>82.70%</td>
-    </tr>
-    <tr>
-      <td><strong>SSC</strong></td>
-      <td>Narayana E.M School</td>
-      <td>2019</td>
-      <td>9.8 GPA</td>
-    </tr>
-  </tbody>
-</table>
-
+    <table class="education-table">
+      <thead>
+        <tr>
+          <th>Qualification</th>
+          <th>Institution</th>
+          <th>Year</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>B.Tech in CSE (AI & ML)</strong></td>
+          <td>Aditya College of Engineering and Technology</td>
+          <td>2021 – 2025</td>
+          <td>7.35 CGPA</td>
+        </tr>
+        <tr>
+          <td><strong>Intermediate</strong></td>
+          <td>Sri Vasavi Junior College</td>
+          <td>2019 – 2021</td>
+          <td>82.70%</td>
+        </tr>
+        <tr>
+          <td><strong>SSC</strong></td>
+          <td>Narayana E.M School</td>
+          <td>2019</td>
+          <td>9.8 GPA</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
-
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
