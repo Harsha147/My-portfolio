@@ -3,59 +3,454 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harsha's Portfolio</title>
+  <title>Harshavardhan's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
       margin: 0;
-      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f3f4f6;
+      color: #111827;
     }
-    nav {
-      background-color: #222;
-      padding: 1em;
+
+    header {
+      background: #111827;
+      color: #fff;
+      padding: 1.5rem 1rem;
       text-align: center;
     }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
     }
+
+    nav a {
+      color: #fff;
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
     nav a:hover {
+      transform: scale(1.15);
+      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(to right, rgba(31, 41, 55, 0.8), rgba(17, 24, 39, 0.9)), 
+                  url('https://images.unsplash.com/photo-1549921296-3a3b51ec0bba?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #d1d5db;
+      margin-bottom: 2rem;
+    }
+
+    .hero a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    .hero a.primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .hero a.primary:hover {
+      background: #1d4ed8;
+      transform: scale(1.05);
+    }
+
+    .hero a.secondary {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .hero a.secondary:hover {
+      background: white;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+
+    section:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      border-left: 4px solid #2563eb;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+
+    #about {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    #about img {
+      max-width: 200px;
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    #about div {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #111827;
+      color: #fff;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+
+    a {
+      color: #2563eb;
+    }
+
+    a:hover {
       text-decoration: underline;
     }
-    .container {
-      padding: 2em;
-      max-width: 900px;
-      margin: auto;
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.25rem; }
+      .hero p { font-size: 1rem; }
+      #about { flex-direction: column; text-align: center; }
+      #about img { height: 150px; width: 150px; }
     }
-    h1 {
-      color: #333;
-      margin-bottom: 0.5em;
+
+    table.education-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
-    p {
-      color: #555;
-      line-height: 1.6;
+
+    .education-table th, .education-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .education-table thead {
+      background-color: #e0f2fe;
+      color: #0f172a;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .education-table thead th:first-child {
+      border-top-left-radius: 8px;
+    }
+
+    .education-table thead th:last-child {
+      border-top-right-radius: 8px;
+    }
+
+    .education-table tbody tr:hover {
+      background-color: #f1f5f9;
+    }
+
+    /* Contact Section */
+    #contact {
+      background-color: #1f2937;
+      color: #f9fafb;
+      text-align: center;
+      padding: 2.5rem;
+      border-radius: 16px;
+      margin-top: 3rem;
+    }
+
+    #contact h2 {
+      color: #ffffff;
+      border-left: none;
+    }
+
+    #contact p {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    #contact a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    #contact i {
+      margin-right: 0.5rem;
+      color: #93c5fd;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">About Me</a>
-    <a href="education.html">Education</a>
-    <a href="projects.html">Projects</a>
-    <a href="internships.html">Internships</a>
-    <a href="certifications.html">Certifications</a>
-    <a href="skills.html">Skills</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
-  <div class="container">
-    <h1>About Me</h1>
-    <p>
-      Hi, I'm Harsha, a final-year engineering student with a strong background in C, Java, Python, and AWS DevOps. I have completed internships in Frontend Development and AI/ML at UniStack and SkillDzire. My project "Suicidal Content Detection System" uses Flask and PyTorch and achieves 85% accuracy. I'm AWS Certified and have taken relevant courses from Coursera and Udemy. Passionate about solving real-world problems with tech!
-    </p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Harshavardhan Neyyala</h1>
+    <p>Aspiring AI & Machine Learning Engineer</p>
+    <div>
+      <a href="#projects" class="primary">View Projects</a>
+      <a href="21MH1A4239resume.pdf" target="_blank" class="secondary">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- Header -->
+  <header>
+    <h1>Neyyala Harshavardhan</h1>
+    <p>Aspiring AI & ML Developer | Python | Web Development | AWS Cloud Practitioner</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#internships">Internships</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#skills">Skills</a>
+      <a href="#learning">Learning</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <img src="images/harsha.jpg" alt="Harshavardhan Neyyala Photo" />
+    <div>
+      <h2>About Me</h2>
+      <p><strong>Career Objective:</strong> Passionate AI & ML enthusiast with hands-on experience in developing predictive models and full stack web applications, machine learning pipelines, and cloud technologies. Proven ability to deliver
+ scalable solutions and optimize systems in collaborative and remote settings...</p>
+      <p>B.Tech in Computer Science & Engineering majoring in AI & ML from Aditya College of Engineering and Technology...</p>
+      <p>Interned as a <strong>Frontend Developer</strong> at UniStack, and in <strong>AI & ML</strong> roles at SkillDzire.</p>
+      <p>Certified in <strong>AWS Cloud Practitioner</strong>, <strong>Python</strong>, and <strong>C Programming</strong>.</p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <table class="education-table">
+      <thead>
+        <tr>
+          <th>Qualification</th>
+          <th>Institution</th>
+          <th>Year</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>B.Tech in CSE (AI & ML)</strong></td>
+          <td>Aditya College of Engineering and Technology</td>
+          <td>2021 – 2025</td>
+          <td>7.35 CGPA</td>
+        </tr>
+        <tr>
+          <td><strong>Intermediate</strong></td>
+          <td>Sri Vasavi Junior College</td>
+          <td>2019 – 2021</td>
+          <td>82.70%</td>
+        </tr>
+        <tr>
+          <td><strong>SSC</strong></td>
+          <td>Narayana E.M School</td>
+          <td>2019</td>
+          <td>9.8 GPA</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Suicidal Content Detection System</h3>
+      <p><strong>Challenge:</strong> Detect and flag suicidal posts on social media platforms to assist in timely intervention.</p>
+      <p><strong>Approach:</strong> Developed a hybrid machine learning model combining NLP techniques and sentiment analysis using SVM, Random Forest, and ANN.</p>
+      <p><strong>Impact:</strong> Achieved over 85% accuracy in detecting harmful content, providing a potential tool for mental health support teams.</p>
+      <p><strong>Tech Stack:</strong> Python, Flask, PyTorch, Scikit-learn, HTML, CSS</p>
+    </div>
+  </section>
+
+  <section id="internships">
+    <h2>Internships</h2>
+    <div class="internship">
+      <h3>Frontend Developer – UniStack / Hydro Tribe</h3>
+      <ul>
+        <li>Developed responsive and user-friendly UI using HTML, CSS, and JavaScript.</li>
+        <li>Optimized page load speed, improving user experience by 20%.</li>
+        <li> Integrated RESTful APIs in collaboration with design and backend teams.</li>
+        <li><a href="certificates/Frontend_Developer_Certificate.pdf" target="_blank">View Certificate</a></li>
+      </ul>
+    </div>
+    <div class="internship">
+      <h3>Artificial Intelligence Intern – SkillDzire</h3>
+      <ul>
+        <li>Applied AI algorithms to real-world datasets, improving classification accuracy on benchmark tests.</li>
+        <li>Collaborated with data scientists to fine-tune models for better performance.</li>
+        <li>Created dashboards and reports to present insights effectively to stakeholders.</li>
+        <li><a href="certificates/Neyyala_Harshavardhan_AI_Certificate.pdf" target="_blank">View Certificate</a></li>
+      </ul>
+    </div>
+    <div class="internship">
+      <h3>Machine Learning Intern – SkillDzire</h3>
+      <ul>
+        <li>Built scalable ML pipelines and predictive models for business use cases.</li>
+        <li>Reduced prediction errors by 15% through feature engineering and hyperparameter tuning.</li>
+        <li>Built automated testing frameworks for validating model accuracy.</li>
+        <li><a href="certificates/Neyyala_Harshavardhan_certificateml.pdf" target="_blank">View Certificate</a></li>
+      </ul>
+    </div>
+  </section>
+
+ <section id="certifications">
+  <h2>Certifications</h2>
+  
+  <div class="certification">
+    <h3>AWS Certified Cloud Practitioner</h3>
+    <ul>
+      <li>Gained a solid foundation in AWS core services including EC2, S3, RDS, Lambda, and IAM.</li>
+      <li>Demonstrated understanding of cloud architecture, billing, and security best practices.</li>
+      <li>Successfully implemented real-world cloud scenarios during practice labs.</li>
+      <li><a href="certificates/AWS Certified Cloud Practitioner.pdf" target="_blank">View Certificate</a></li>
+    </ul>
   </div>
+
+  <div class="certification">
+    <h3>Programming Essentials in Python</h3>
+    <ul>
+      <li>Covered key programming concepts such as data structures, loops, functions, file handling, and OOP.</li>
+      <li>Applied Python in mini-projects involving automation and data analysis.</li>
+      <li>Hands-on experience with libraries like NumPy and Pandas.</li>
+      <li><a href="certificates/Python_Essentials_Certificate.pdf" target="_blank">View Certificate</a></li>
+    </ul>
+  </div>
+
+  <div class="certification">
+    <h3>Programming Essentials in C</h3>
+    <ul>
+      <li>Focused on fundamentals of C programming including pointers, memory management, structures, and recursion.</li>
+      <li>Built logic-driven programs that improved algorithmic thinking and problem-solving efficiency.</li>
+      <li><a href="certificates/C_Essentials_Certificate.pdf" target="_blank">View Certificate</a></li>
+    </ul>
+  </div>
+
+  <div class="certification">
+    <h3>Aap Badho Desh Ko Badhao – Lead India Foundation</h3>
+    <ul>
+      <li><a href="certificates/Aap_Badho_Desh_Certificate.pdf" target="_blank">View Certificate</a></li>
+    </ul>
+  </div>
+
+</section>
+
+
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> Python, C, Java, C++ (Basic)</li>
+      <li><strong>Web:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>Frameworks & Libraries:</strong> Flask, PyTorch, Scikit-learn</li>
+      <li><strong>Tools:</strong> VS Code, Jupyter Notebook, Git, Docker</li>
+      <li><strong>Soft Skills:</strong>
+  <ul>
+    <li><strong>Teamwork</strong> – Demonstrated in internships through effective collaboration with cross-functional teams.</li>
+    <li><strong>Communication</strong> – Proven ability to communicate clearly in remote collaboration environments.</li>
+    <li><strong>Leadership</strong> – Refined through managing and guiding student-led projects to successful completion.</li>
+  </ul>
+</li>
+
+    </ul>
+  </section>
+
+  <section id="learning">
+    <h2>Learning & Growth</h2>
+    <ul>
+      <li>Participated in AI & ML workshops conducted by SkillDzire.</li>
+      <li>Attended webinars on cloud computing and deployment strategies.</li>
+      <li>Completedonline courses such as “Machine Learning by AndrewNg”(Coursera)and“JavaScript
+ for Beginners” (Udemy).</li>
+      <li>Active member of college coding and AI clubs, regularly contributing to hackathons.</li>
+    </ul>
+  </section>
+
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+    <ul>
+      <li>Reading Story Books – Enhances creativity and empathy.</li>
+      <li>Watching Films – Improves cultural awareness and storytelling appreciation.</li>
+      <li>Listening to Music – Helps relax and maintain focus.</li>
+      <li>Playing Cricket and Chess – Develops strategic thinking and teamwork skills.</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+   <h2>Contact</h2>
+<p>Feel free to reach out for collaborations, internships, or just to connect!</p>
+    
+<p>📧 <a href="mailto:harsha7125hg@gmail.com">harsha7125hg@gmail.com</a></p>
+<p>📞 <a href="tel:+916300841590">+91 6300841590</a></p>
+<p>🔗 <a href="https://linkedin.com/in/harsha-neyyala-2ba970229" target="_blank">Linkedin</a></p>
+<p>💻 <a href="https://github.com/Harsha147" target="_blank">Github</a></p>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Neyyala Harshavardhan. All rights reserved.</p>
+  </footer>
 </body>
 </html>
