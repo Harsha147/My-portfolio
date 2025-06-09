@@ -1,114 +1,61 @@
-<!-- index.html (Home Page - About Me Only) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harshavardhan - About Me</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Harsha's Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #222;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 0.5em;
+    }
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="internships.html">Internships</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="learning.html">Learning</a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <a href="index.html">About Me</a>
+    <a href="education.html">Education</a>
+    <a href="projects.html">Projects</a>
+    <a href="internships.html">Internships</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <section id="about">
+  <div class="container">
     <h1>About Me</h1>
-    <p>I am Harshavardhan, a final-year Engineering student passionate about Full-Stack Development, AI/ML, and Cloud Computing. I’m an AWS Certified Developer with hands-on experience through internships and personal projects.</p>
-  </section>
+    <p>
+      Hi, I'm Harsha, a final-year engineering student with a strong background in C, Java, Python, and AWS DevOps. I have completed internships in Frontend Development and AI/ML at UniStack and SkillDzire. My project "Suicidal Content Detection System" uses Flask and PyTorch and achieves 85% accuracy. I'm AWS Certified and have taken relevant courses from Coursera and Udemy. Passionate about solving real-world problems with tech!
+    </p>
+  </div>
 </body>
 </html>
-
-<!-- education.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Education</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <!-- Same nav bar as index.html -->
-  </header>
-  <section id="education">
-    <h1>Education</h1>
-    <ul>
-      <li><strong>B.Tech</strong> - 7.35 GPA</li>
-      <li><strong>Intermediate</strong> - 82.70%</li>
-    </ul>
-  </section>
-</body>
-</html>
-
-<!-- Repeat similar structure for the rest: projects.html, internships.html, certifications.html, skills.html, learning.html, hobbies.html, contact.html -->
-
-<!-- Example for projects.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <!-- Same nav bar -->
-  </header>
-  <section id="projects">
-    <h1>Projects</h1>
-    <ul>
-      <li>
-        <strong>Suicidal Content Detection System</strong><br>
-        Built with Flask and PyTorch, 85% accuracy
-      </li>
-    </ul>
-  </section>
-</body>
-</html>
-
-<!-- styles.css (Basic Shared Styling) -->
-/* styles.css */
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  color: #333;
-}
-nav ul {
-  list-style: none;
-  padding: 10px;
-  display: flex;
-  gap: 15px;
-  background: #222;
-  color: white;
-  justify-content: center;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-section {
-  padding: 30px;
-}
-
-/* Highlight headings */
-h1 {
-  color: #2c3e50;
-}
